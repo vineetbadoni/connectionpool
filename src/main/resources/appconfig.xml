@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <bean id="alarmPoller" class="com.ca.oi.engine.ingestor.poller.DistributedAlarmPoller" scope="singleton" >
+    <property name="cache"  ref="cache"/>
+    <property name="alarmExtractor" ref="alarmExtractor" />
+  </bean>
+
+</beans>
