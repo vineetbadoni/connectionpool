@@ -2,12 +2,6 @@ package com.test.pool;
 
 public class DummyConnection implements Connection {
 
-    private String name;
-
-    public DummyConnection(String name ){
-        this.name = name;
-    }
-
     @Override
     public void init() {
         System.out.println("Connection to Mars is initialized");
@@ -23,8 +17,5 @@ public class DummyConnection implements Connection {
         System.out.println("Closing connection to Mars");
     }
 
-    @Override
-    public String getName() {
-        return name;
-    }
+
 }

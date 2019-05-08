@@ -3,10 +3,10 @@ package com.test.pool;
 public interface Pool<T extends Connection>
 {
 
-    int capacity=0;
+    T acquire() throws PoolException;
 
-    public T acquire();
+    void release() throws PoolException;
 
-    public void release();
+    void shutdown() throws PoolException;
 
 }
